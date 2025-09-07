@@ -4,25 +4,17 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
-// Needed for __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// ✅ Serve all static files (HTML, CSS, JS) from "public" folder
+app.use(express.static(path.join(__dirname, "public")));
 
-// ✅ Serve everything in the frontend folder (CSS, JS, images, etc.)
-app.use(express.static(__dirname));
-
-// Middleware
 app.use(express.json());
 
-// ✅ Serve index.html on /
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
-// ✅ Track visitor IPs
+// Track visitor IP
 app.post("/track", async (req, res) => {
   try {
     const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
@@ -32,6 +24,11 @@ app.post("/track", async (req, res) => {
     console.error("DB error:", err);
     res.status(500).json({ error: "Error storing IP" });
   }
+});
+
+// ✅ Default route -> serve index.html
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.listen(PORT, () => {
