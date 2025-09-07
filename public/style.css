@@ -2,7 +2,7 @@
     body {
       margin: 0;
       font-family: "Montserrat", sans-serif;
-      background: #f9f6ee;
+      background: #fff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -27,12 +27,6 @@
       justify-content: center;
       position: relative;
     }
-
-    h1 {
-  color: #0d47a1;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
 
     /* Video card */
     .video-card {
