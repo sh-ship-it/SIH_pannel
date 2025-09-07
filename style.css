@@ -1,0 +1,115 @@
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      background: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Title */
+    .title {
+      
+      position: absolute;
+      top: 20px;
+      left: 15%;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #111;
+    }
+
+    /* Container for lines + video */
+    .container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Video card */
+    .video-card {
+      display: inline-block;
+      position: relative;
+      width: 70%;
+      max-width: 620px;
+      aspect-ratio: 16/9;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Lines */
+    .line {
+      position: absolute;
+      background: #000;
+      z-index: 1;
+    }
+
+    /* Vertical lines */
+    .v-line {
+      top: 0;
+      bottom: 0;
+      width: 2px;
+    }
+    .v1 { left: 95%; }
+    .v2 { right: 95%; }
+
+    /* Horizontal lines */
+    .h-line {
+      left: 0;
+      right: 0;
+      height: 2px;
+    }
+    .h1 { top: 80%; }
+    .h2 { bottom: 90%; }
+
+
+    .info-box {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-size: 1rem;
+      color: #333;
+      text-align: center;
+      z-index: 2;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .title {
+        font-size: 1rem;
+        
+      }
+      .video-card {
+        width: 60%;
+        height: 40%;
+        border-radius: 10px;
+      }
+      .info-box {
+        width: 70%;
+        font-size: 0.9rem;
+        padding: 10px 15px;
+      }
+      .v1 { left: 90%; }
+      .v2 { right: 90%; }
+      .h1 { top: 75%; }
+      .h2 { bottom: 90%; }
+    }
+   
+  

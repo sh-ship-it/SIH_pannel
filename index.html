@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo Video — Classic Modern</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+  <h1 class="title">AR-Heritage</h1>
+  
+  <main class="container">
+    <!-- Lines -->
+    <div class="line v-line v1"></div>
+    <div class="line v-line v2"></div>
+    <div class="line h-line h1"></div>
+    <div class="line h-line h2"></div>
+    
+    <div class="video-card">
+      <video id="demoVideo" controls preload="metadata" poster="">
+        <source src="demo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- Video -->
+    <div class="info-box">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus vitae consequatur ratione incidunt dignissimos nemo eveniet aspernatur, eaque aliquid culpa assumenda dolores. Excepturi tempora sapiente ipsam fuga veniam quasi sequi?
+    </div>
+  </main>
+<script>
+  fetch("/track", { method: "POST" })
+    .then(res => res.json())
+    .then(data => console.log("Visitor tracked:", data))
+    .catch(err => console.error("Tracking failed:", err));
+</script>
+
+
+</body>
+</html>
