@@ -1,40 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>INVARIANTS</title>
-  <link rel="stylesheet" href="/style.css" />
-
+  <meta charset="UTF-8">
+  <meta name="INVARIANTS" content="width=device-width, initial-scale=1.0">
+  <title>AR-Based Cultural Heritage Platform</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <h1 class="title">THEME</h1>
-  
-  <main class="container">
-    <!-- Lines -->
-    <div class="line v-line v1"></div>
-    <div class="line v-line v2"></div>
-    <div class="line h-line h1"></div>
-    <div class="line h-line h2"></div>
-    
-    <div class="video-card">
-      <video id="demoVideo" controls preload="metadata" poster="">
-        <source src="demo.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <!-- Video -->
-    <div class="info-box">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus vitae consequatur ratione incidunt dignissimos nemo eveniet aspernatur, eaque aliquid culpa assumenda dolores. Excepturi tempora sapiente ipsam fuga veniam quasi sequi?
-    </div>
-  </main>
-<script>
-  fetch("/track", { method: "POST" })
-    .then(res => res.json())
-    .then(data => console.log("Visitor tracked:", data))
-    .catch(err => console.error("Tracking failed:", err));
-</script>
 
+<body>
+  <div class="container">
+    <h1>AR-Based Cultural Heritage Preservation Platform</h1>
+    <p class="website-link">
+      Website: <a href="https://ar.com" target="_blank">example.com</a>
+    </p>
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/Uu6PA0383wA?si=bJKCJTaH3coy9aVR" 
+        title="YouTube video" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+<div class="scroller">
+  <div class="scroller__inner">
+    <img src="/assets/monument1.png" alt="Monument 1">
+    <img src="/assets/monument2.png" alt="Monument 2">
+    <img src="/assets/monument3.png" alt="Monument 3">
+    <img src="/assets/monument4.png" alt="Monument 4">
+    <img src="/assets/monument5.png" alt="Monument 5">
+    <img src="/assets/monument6.png" alt="Monument 6">
+    <img src="/assets/monument7.png" alt="Monument 7">
+    <img src="/assets/monument1.png" alt="Monument 1">
+    <img src="/assets/monument2.png" alt="Monument 2">
+    <img src="/assets/monument3.png" alt="Monument 3">
+    <img src="/assets/monument4.png" alt="Monument 4">
+    <img src="/assets/monument5.png" alt="Monument 5">
+    <img src="/assets/monument6.png" alt="Monument 6">
+    <img src="/assets/monument7.png" alt="Monument 7">
+  </div>
+</div>
+
+  <script>
+    fetch("/track", { method: "POST" })
+      .then(res => res.json())
+      .then(data => console.log("Visitor tracked:", data))
+      .catch(err => console.error("Tracking failed:", err));
+  </script>
 
 </body>
 </html>

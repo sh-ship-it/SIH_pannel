@@ -1,115 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      font-family: "Montserrat", sans-serif;
-      background: #fff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f4ea;
+  color: #0d47a1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-    /* Title */
-    .title {
-      
-      position: absolute;
-      top: 20px;
-      left: 15%;
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #111;
-    }
+/*main*/
+.container {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  max-width: 900px;
+  width: 100%;
+}
 
-    /* Container for lines + video */
-    .container {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
+/*title*/
+.container h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #0d47a1;
+}
 
-    /* Video card */
-    .video-card {
-      display: inline-block;
-      position: relative;
-      width: 70%;
-      max-width: 620px;
-      aspect-ratio: 16/9;
-      background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-      z-index: 2;
-      overflow: hidden;
-    }
+/*link*/
+.website-link {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
 
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.website-link a {
+  color: #1565c0;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    /* Lines */
-    .line {
-      position: absolute;
-      background: #000;
-      z-index: 1;
-    }
+.website-link a:hover {
+  text-decoration: underline;
+}
 
-    /* Vertical lines */
-    .v-line {
-      top: 0;
-      bottom: 0;
-      width: 2px;
-    }
-    .v1 { left: 95%; }
-    .v2 { right: 95%; }
+/*video*/
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 1.2rem;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
 
-    /* Horizontal lines */
-    .h-line {
-      left: 0;
-      right: 0;
-      height: 2px;
-    }
-    .h1 { top: 80%; }
-    .h2 { bottom: 90%; }
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
 
+/*monuments*/
+.monuments {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding: 0.5rem;
+  background: #fff;
+  scroll-behavior: smooth;
+}
 
-    .info-box {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;
-      max-width: 800px;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 15px 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      font-size: 1rem;
-      color: #333;
-      text-align: center;
-      z-index: 2;
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      .title {
-        font-size: 1rem;
-        
-      }
-      .video-card {
-        width: 60%;
-        height: 40%;
-        border-radius: 10px;
-      }
-      .info-box {
-        width: 70%;
-        font-size: 0.9rem;
-        padding: 10px 15px;
-      }
-      .v1 { left: 90%; }
-      .v2 { right: 90%; }
-      .h1 { top: 75%; }
-      .h2 { bottom: 90%; }
-    }
-   
-  
+.monuments::-webkit-scrollbar {
+  display: none;
+}
+
+.monuments img {
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f4ea;
+  color: #0d47a1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* main container */
+.container {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* title */
+.container h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #0d47a1;
+}
+
+/* website link */
+.website-link {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.website-link a {
+  color: #1565c0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.website-link a:hover {
+  text-decoration: underline;
+}
+
+/* video wrapper */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 1.2rem;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* monuments gallery */
+.monuments {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding: 0.5rem;
+  background: #fff;
+  scroll-behavior: smooth;
+}
+
+.monuments::-webkit-scrollbar {
+  display: none;
+}
+
+.monuments img {
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* horizontal scroller */
+.scroller {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: #f7f4ea;
+  padding: 0.3rem 0;
+  height: 70px;
+}
+
+.scroller__inner {
+  display: inline-block;
+  animation: scroll 20s linear infinite;
+}
+
+.scroller__inner img {
+  height: 60px; /* smaller images */
+  margin: 0 0.5rem;
+  vertical-align: middle;
+}
+
+/* hide scrollbar for all browsers */
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+.scroller {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* keyframes for horizontal scroll */
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* tablet styles */
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem 1.2rem;
+  }
+
+  .container h1 {
+    font-size: 2.3rem;
+  }
+
+  .video-wrapper {
+    max-width: 1000px;
+    margin-bottom: 1.5rem;
+  }
+
+  .monuments img {
+    height: 150px;
+  }
+
+  .scroller {
+    height: 80px;
+    padding: 0.4rem 0;
+  }
+
+  .scroller__inner img {
+    height: 70px;
+  }
+}
+
+/* mobile styles */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.8rem;
+  }
+
+  .container h1 {
+    font-size: 1.6rem;
+  }
+
+  .website-link {
+    font-size: 0.95rem;
+  }
+
+  .video-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .monuments img {
+    height: 90px;
+  }
+
+  .scroller {
+    height: 60px;
+    padding: 0.2rem 0;
+  }
+
+  .scroller__inner img {
+    height: 50px;
+  }
+}
