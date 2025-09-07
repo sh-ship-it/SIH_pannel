@@ -26,8 +26,8 @@ app.post("/track", async (req, res) => {
   }
 });
 
-// ✅ Default route -> serve index.html
-app.get("*", (req, res) => {
+// ✅ Default route -> always serve index.html
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
