@@ -1,54 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="INVARIANTS" content="width=device-width, initial-scale=1.0">
-  <title>AR-Based Cultural Heritage Platform</title>
-  <link rel="stylesheet" href="/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="INVARIANTS" content="width=device-width, initial-scale=1.0" />
+    <title>AR-Based Cultural Heritage Platform</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- /style.css -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <div class="container">
-    <h1>AR-Based Cultural Heritage Preservation Platform</h1>
-    <p class="website-link">
-      Website: <a href="https://ar.com" target="_blank">example.com</a>
-    </p>
-    <div class="video-wrapper">
-      <iframe 
-        src="https://www.youtube.com/embed/Uu6PA0383wA?si=bJKCJTaH3coy9aVR" 
-        title="YouTube video" 
-        frameborder="0" 
-        allowfullscreen>
-      </iframe>
+  <body>
+    <!-- From Uiverse.io by akshat-patel28 -->
+    <div class="container">
+      <div class="button-container">
+        <button class="button" >
+          <svg
+            class="icon"
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 1024 1024"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          ><title>HOME</title>
+            <path
+              d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"
+            ></path>
+          </svg>
+        </button>
+        <button class="button">
+          <svg
+            class="icon"
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          ><title>CONTATCT US</title>
+            <path
+              d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile">
+        <div class="floater"> <img src="assets/second.jpg" alt="taj"></div>
+        <span>SMARAK-AR</span>
+        <div class="mobile-container">
+          <iframe width="315" height="560" src="https://www.youtube.com/embed/Uu6PA0383wA?si=I10Ize8R6TVfCHED" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <button class="notch"></button>
+        </div>
+        <div class="floater"><img src="assets/four.jpg" alt=""></div>
+          <!-- mobile buttons -->
+        </div>
+      </div>
     </div>
-  </div>
 
-<div class="scroller">
-  <div class="scroller__inner">
-    <img src="/assets/monument1.png" alt="Monument 1">
-    <img src="/assets/monument2.png" alt="Monument 2">
-    <img src="/assets/monument3.png" alt="Monument 3">
-    <img src="/assets/monument4.png" alt="Monument 4">
-    <img src="/assets/monument5.png" alt="Monument 5">
-    <img src="/assets/monument6.png" alt="Monument 6">
-    <img src="/assets/monument7.png" alt="Monument 7">
-    <img src="/assets/monument1.png" alt="Monument 1">
-    <img src="/assets/monument2.png" alt="Monument 2">
-    <img src="/assets/monument3.png" alt="Monument 3">
-    <img src="/assets/monument4.png" alt="Monument 4">
-    <img src="/assets/monument5.png" alt="Monument 5">
-    <img src="/assets/monument6.png" alt="Monument 6">
-    <img src="/assets/monument7.png" alt="Monument 7">
-  </div>
-</div>
-
-  <script>
-    fetch("/track", { method: "POST" })
-      .then(res => res.json())
-      .then(data => console.log("Visitor tracked:", data))
-      .catch(err => console.error("Tracking failed:", err));
-  </script>
-
-</body>
+    <script>
+      fetch("/track", { method: "POST" })
+        .then((res) => res.json())
+        .then((data) => console.log("Visitor tracked:", data))
+        .catch((err) => console.error("Tracking failed:", err));
+    </script>
+  </body>
 </html>

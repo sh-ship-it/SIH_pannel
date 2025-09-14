@@ -1,282 +1,118 @@
-* {
-  margin: 0;
+body{
+  margin: 0px 0px 0px 5px;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'cinzel', serif;
+  background-color: rgb(240, 240, 240);
+  /* height: 100vh; */
+  /* width: 99vw; */
 }
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f4ea;
-  color: #0d47a1;
+.container{
   display: flex;
-  flex-direction: column;
+ 
+  /* height: 100vh; */
+  
+}
+.mobile{
+ position: relative;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  min-height: 100vh;
-  overflow-x: hidden;
+  height: 100vh;
+  width: 99vw;
+  background-color: rgb(255, 255, 255);
+  z-index: 0;
 }
 
-/*main*/
-.container {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  max-width: 900px;
-  width: 100%;
-}
-
-/*title*/
-.container h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-  color: #0d47a1;
-}
-
-/*link*/
-.website-link {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
-.website-link a {
-  color: #1565c0;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.website-link a:hover {
-  text-decoration: underline;
-}
-
-/*video*/
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  margin-bottom: 1.2rem;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-
-.video-wrapper iframe {
+.notch {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 30px;
+  background-color: rgb(12, 12, 12);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 2;
+}
+.mobile-container {
+  position: relative;
+  height: 667px  ;
+  width: 325px;
+  border: 10px solid black;
+  border-radius: 45px;
+  background-color: rgba(255, 255, 255, 0.563);
+  z-index: 1;
+
+}
+iframe{
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 25px;
+  z-index: 2;
+}
+
+.floater{
+  margin : 0 auto;
+  height: 450px;
+  width: 400px;
+  background-color: rgb(255, 255, 255)
+}
+img{
   height: 100%;
-  border-radius: 10px;
-}
-
-/*monuments*/
-.monuments {
-  display: flex;
-  gap: 0.6rem;
-  overflow-x: auto;
-  padding: 0.5rem;
-  background: #fff;
-  scroll-behavior: smooth;
-}
-
-.monuments::-webkit-scrollbar {
-  display: none;
-}
-
-.monuments img {
-  height: 120px;
-  flex-shrink: 0;
-  border-radius: 8px;
+  width: 100%;
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
   object-fit: cover;
 }
+span{
+  position: absolute;
+  /* top: 20px; */
+  font-size: 150px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ee841a, #9f9c9c, #138808);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f4ea;
-  color: #0d47a1;
+/* From Uiverse.io by akshat-patel28 */ 
+.button-container {
   display: flex;
   flex-direction: column;
+  background-color: rgb(250, 250, 250);
+  width: 40px;
+  height: 100vh;
   align-items: center;
-  justify-content: space-between;
-  min-height: 100vh;
-  overflow-x: hidden;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+    rgba(27, 133, 219, 0.5) 5px 10px 15px;
 }
 
-/* main container */
-.container {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  max-width: 900px;
-  width: 100%;
-}
-
-/* title */
-.container h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-  color: #0d47a1;
-}
-
-/* website link */
-.website-link {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
-.website-link a {
-  color: #1565c0;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.website-link a:hover {
-  text-decoration: underline;
-}
-
-/* video wrapper */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  margin-bottom: 1.2rem;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-
-/* monuments gallery */
-.monuments {
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
   display: flex;
-  gap: 0.6rem;
-  overflow-x: auto;
-  padding: 0.5rem;
-  background: #fff;
-  scroll-behavior: smooth;
+  align-items: center;
+  justify-content: center;
+  color: #0d0101;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
 }
 
-.monuments::-webkit-scrollbar {
-  display: none;
+.button:hover {
+  transform: translateY(-3px);
 }
 
-.monuments img {
-  height: 120px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  object-fit: cover;
+.icon {
+  font-size: 20px;
 }
 
-/* horizontal scroller */
-.scroller {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  background: #f7f4ea;
-  padding: 0.3rem 0;
-  height: 70px;
-}
 
-.scroller__inner {
-  display: inline-block;
-  animation: scroll 20s linear infinite;
-}
-
-.scroller__inner img {
-  height: 60px; /* smaller images */
-  margin: 0 0.5rem;
-  vertical-align: middle;
-}
-
-/* hide scrollbar for all browsers */
-.scroller::-webkit-scrollbar {
-  display: none;
-}
-.scroller {
-  -ms-overflow-style: none; /* IE & Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-/* keyframes for horizontal scroll */
-@keyframes scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* tablet styles */
-@media (min-width: 768px) {
-  .container {
-    padding: 2rem 1.2rem;
-  }
-
-  .container h1 {
-    font-size: 2.3rem;
-  }
-
-  .video-wrapper {
-    max-width: 1000px;
-    margin-bottom: 1.5rem;
-  }
-
-  .monuments img {
-    height: 150px;
-  }
-
-  .scroller {
-    height: 80px;
-    padding: 0.4rem 0;
-  }
-
-  .scroller__inner img {
-    height: 70px;
-  }
-}
-
-/* mobile styles */
-@media (max-width: 480px) {
-  .container {
-    padding: 1rem 0.8rem;
-  }
-
-  .container h1 {
-    font-size: 1.6rem;
-  }
-
-  .website-link {
-    font-size: 0.95rem;
-  }
-
-  .video-wrapper {
-    margin-bottom: 1rem;
-  }
-
-  .monuments img {
-    height: 90px;
-  }
-
-  .scroller {
-    height: 60px;
-    padding: 0.2rem 0;
-  }
-
-  .scroller__inner img {
-    height: 50px;
-  }
-}
