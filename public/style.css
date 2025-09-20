@@ -1,108 +1,197 @@
-body{
-  margin: 0px 0px 0px 5px;
+/* Reset & Base */
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'cinzel', serif;
-  background-color: rgb(255, 255, 255);
-  /* height: 100vh; */
-  /* width: 99vw; */
 }
-.container{
-  display: flex;
-  /* background-color: rgb(0, 0, 0); */
- 
-  /* height: 100vh; */
-  
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
 }
-.mobile{
- position: relative;
+
+/* ---------- Header ---------- */
+header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  width: 99vw;
-  background-color: rgb(255, 255, 255);
-  z-index: 0;
+  padding: 15px 40px;
 }
 
-.mobile-container {
-  position: relative;
-  height: 710px;
-  width: 350px;
-  border-radius: 22px;
-  pointer-events: none;
-  z-index: 3;
-
-}
-iframe{
-  position: absolute;
-  /* top: 1px; */
-  height: 700px;
-  width: 342px;
-  left: 49.9%;
-  transform: translateX(-50%);
-  border-radius: 50px;
-  z-index: 2;
-}
-
-.floater{
-  margin : 0 auto;
-  height: 400px;
-  width: 350px;
-  background-color: rgb(255, 255, 255)
-}
-img{
-  height: 100%;
-  width: 100%;
-  border-bottom-left-radius: 45px;
-  border-bottom-right-radius: 45px;
-  object-fit: cover;
-}
-span{
-  position: absolute;
-  /* top: 20px; */
-  font-size: 150px;
+.logo {
+  font-size: 30px;
   font-weight: bold;
-  background: linear-gradient(90deg, #ee841a, #9f9c9c, #138808);
+  color: #004A33;
+  background-image: linear-gradient(45deg, #004A33, #006947, #008A5E);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 
-/* From Uiverse.io by akshat-patel28 */ 
-.button-container {
+nav ul {
   display: flex;
-  flex-direction: column;
-  background-color: rgb(250, 250, 250);
-  width: 40px;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
-    rgba(27, 133, 219, 0.5) 5px 10px 15px;
+  list-style: none;
+  background: #e8e6ff;
+  padding: 15px 20px;
+  border-radius: 15px;
 }
 
-.button {
-  outline: 0 !important;
-  border: 0 !important;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0d0101;
-  transition: all ease-in-out 0.3s;
-  cursor: pointer;
+nav ul li {
+  margin: 0 10px;
 }
 
-.button:hover {
-  transform: translateY(-3px);
-}
-
-.icon {
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
   font-size: 20px;
 }
 
+.login-btn {
+  color: white;
+  background: linear-gradient(45deg, #004A33, #006947, #008A5E);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
 
+/* ---------- Main ---------- */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 40px;
+  height: calc(100vh - 100px);
+}
+
+.sticker {
+  position: absolute;
+  width: 160px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.sticker-left-top {
+  left: 8%;
+  top: 10%;
+  transform: rotate(-4deg);
+  width: 300px;
+}
+
+.sticker-left-bottom {
+  left: 6%;
+  bottom: 5%;
+  transform: rotate(-16deg);
+  width: 300px;
+}
+
+.sticker-right-mid {
+  right: 15%;
+  top: 1%;
+  transform: rotate(6deg);
+  width: 300px;
+}
+
+.sticker-right-bottom {
+  right: 3%;
+  bottom: 22%;
+  transform: rotate(10deg);
+  width: 300px;
+}
+
+.sticker-right-small {
+  right: 20%;
+  bottom: 0;
+  transform: rotate(5deg);
+  width: 300px;
+}
+
+.sticker:hover {
+  transform: scale(1.03);
+}
+
+/* Phone */
+.phone-container {
+  width: 90vw;           /* flexible width */
+  max-width: 320px;      /* optional limit */
+  margin: 0 auto;
+}
+
+.phone-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 20;   /* match your phone mockup’s ratio */
+}
+
+/* Screen area locked to % of phone-frame */
+.screen {
+  position: absolute;
+  left: 2%;     /* % offset from left of phone image */
+  top: 7%;       /* % offset from top */
+  width: 91%;    /* % of phone width */
+  height: 86%;   /* % of phone height */
+  overflow: hidden;
+  border-radius: 45px; /* match mockup’s rounded screen */
+  background: #000;
+  z-index: 1;
+}
+
+.screen iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Phone overlay always matches parent */
+.phone-overlay {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+  pointer-events: none; /* so clicks reach iframe */
+}
+
+
+/* ---------- Mobile Responsive ---------- */
+/* ... keep everything from before ... */
+
+/* ---------- Mobile Responsive ---------- */
+@media (max-width: 768px) {
+
+  /* hide everything except logo + phone */
+  nav,
+  .login-btn,
+  .sticker {
+    display: none;
+  }
+
+  header {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 48px;
+    margin-top: 15px;
+    font-weight: 700;
+  }
+
+  main {
+    margin-top: 20px;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+     .phone-container {
+    width: 95vw;
+    max-width: 300px;
+  }
+}
